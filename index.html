@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Hard Working Timer</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="script.js?ver=191002.4"></script>
+</head>
+
+<body>
+    <div id="container">
+        <main>
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+                y="0px" viewBox="0 0 1000 970" xml:space="preserve">
+                <g id="shadow_style">
+                    <filter id="inner_dropshadow">
+                        <feGaussianBlur in="SourceAlpha" stdDeviation="2" />
+                        <feOffset dx="1" dy="1" result="offsetblur" />
+                        <feComponentTransfer>
+                            <feFuncA type="linear" slope="0.2" />
+                        </feComponentTransfer>
+                        <feMerge>
+                            <feMergeNode />
+                            <feMergeNode in="SourceGraphic" />
+                        </feMerge>
+                    </filter>
+                    <filter id="dropshadow" height="120%">
+                        <feGaussianBlur in="SourceAlpha" stdDeviation="3" />
+                        <feOffset dx="2" dy="2" result="offsetblur" />
+                        <feComponentTransfer>
+                            <feFuncA type="linear" slope="0.5" />
+                        </feComponentTransfer>
+                        <feMerge>
+                            <feMergeNode />
+                            <feMergeNode in="SourceGraphic" />
+                        </feMerge>
+                    </filter>
+                    <filter id="hand_dropshadow" height="130%">
+                        <feGaussianBlur in="SourceAlpha" stdDeviation="3" />
+                        <feOffset dx="-8" dy="-2" result="offsetblur" />
+                        <feComponentTransfer>
+                            <feFuncA type="linear" slope="0.2" />
+                        </feComponentTransfer>
+                        <feMerge>
+                            <feMergeNode />
+                            <feMergeNode in="SourceGraphic" />
+                        </feMerge>
+                    </filter>
+                </g>
+                <g id="clock_frame">
+                    <linearGradient id="frame_out_grd" gradientUnits="userSpaceOnUse" x1="500" y1="111" x2="500"
+                        y2="889">
+                        <stop offset="0" style="stop-color:#19D2EA" />
+                        <stop offset="1" style="stop-color:#2999AD" />
+                    </linearGradient>
+                    <path id="frame_out"
+                        d="M716.47,889H283.53c-99.31,0-180.56-81.25-180.56-180.56V291.56
+                c0-99.31,81.25-180.56,180.56-180.56h432.94c99.31,0,180.56,81.25,180.56,180.56v416.88C897.03,807.75,815.78,889,716.47,889z" />
+
+                    <linearGradient id="frame_inner_grd" gradientUnits="userSpaceOnUse" x1="500" y1="862.5" x2="500"
+                        y2="137.5">
+                        <stop offset="0" style="stop-color:#40C9D9" />
+                        <stop offset="1" style="stop-color:#22BED1" />
+                    </linearGradient>
+
+                    <path id="frame_inner"
+                        d="M714.43,862.5H285.57c-85.31,0-155.1-69.8-155.1-155.1V292.6
+                c0-85.31,69.8-155.1,155.1-155.1h428.86c85.31,0,155.1,69.8,155.1,155.1V707.4C869.53,792.7,799.73,862.5,714.43,862.5z" />
+                    <path id="clock_face" d="M706.61,848.34H293.39c-81.91,0-148.92-67.01-148.92-148.92V300.58
+                c0-81.91,67.01-148.92,148.92-148.92h413.22c81.91,0,148.92,67.01,148.92,148.92v398.84
+                C855.53,781.33,788.52,848.34,706.61,848.34z" />
+                    <path id="clock_face_line" d="M694.18,816.5H305.82c-70.87,0-128.86-57.99-128.86-128.86V312.36c0-70.87,57.99-128.86,128.86-128.86
+                h388.35c70.87,0,128.86,57.99,128.86,128.86v375.28C823.03,758.51,765.05,816.5,694.18,816.5z" />
+                </g>
+                <g id="clock_scale">
+                    <line class="scale_bold" x1="620.33" y1="291.35" x2="603.83" y2="319.92" />
+                    <line class="scale_bold" x1="708.36" y1="379.38" x2="679.78" y2="395.88" />
+                    <line class="scale_bold" x1="740.58" y1="499.62" x2="707.58" y2="499.62" />
+                    <line class="scale_bold" x1="708.36" y1="619.88" x2="679.78" y2="603.38" />
+                    <line class="scale_bold" x1="620.33" y1="707.9" x2="603.83" y2="679.33" />
+                    <line class="scale_bold" x1="500.08" y1="740.12" x2="500.08" y2="707.12" />
+                    <line class="scale_bold" x1="379.83" y1="707.9" x2="396.33" y2="679.33" />
+                    <line class="scale_bold" x1="291.8" y1="619.88" x2="320.38" y2="603.38" />
+                    <line class="scale_bold" x1="259.58" y1="499.62" x2="292.58" y2="499.62" />
+                    <line class="scale_bold" x1="291.8" y1="379.38" x2="320.38" y2="395.88" />
+                    <line class="scale_bold" x1="379.83" y1="291.35" x2="396.33" y2="319.92" />
+                    <line class="scale_thin" x1="524.21" y1="270.4" x2="522.44" y2="287.31" />
+                    <line class="scale_thin" x1="548.08" y1="274.19" x2="544.55" y2="290.82" />
+                    <line class="scale_thin" x1="571.42" y1="280.45" x2="566.17" y2="296.62" />
+                    <line class="scale_thin" x1="593.98" y1="289.12" x2="587.07" y2="304.65" />
+                    <line class="scale_thin" x1="635.77" y1="313.27" x2="625.78" y2="327.02" />
+                    <line class="scale_thin" x1="654.55" y1="328.48" x2="643.17" y2="341.11" />
+                    <line class="scale_thin" x1="671.63" y1="345.58" x2="658.99" y2="356.95" />
+                    <line class="scale_thin" x1="686.83" y1="364.36" x2="673.08" y2="374.35" />
+                    <line class="scale_thin" x1="710.95" y1="406.17" x2="695.42" y2="413.08" />
+                    <line class="scale_thin" x1="719.6" y1="428.73" x2="703.43" y2="433.99" />
+                    <line class="scale_thin" x1="725.85" y1="452.08" x2="709.22" y2="455.61" />
+                    <line class="scale_thin" x1="729.62" y1="475.95" x2="712.71" y2="477.73" />
+                    <line class="scale_thin" x1="729.6" y1="524.21" x2="712.69" y2="522.44" />
+                    <line class="scale_thin" x1="725.81" y1="548.08" x2="709.18" y2="544.55" />
+                    <line class="scale_thin" x1="719.55" y1="571.42" x2="703.38" y2="566.17" />
+                    <line class="scale_thin" x1="710.88" y1="593.98" x2="695.35" y2="587.07" />
+                    <line class="scale_thin" x1="686.73" y1="635.77" x2="672.98" y2="625.78" />
+                    <line class="scale_thin" x1="671.52" y1="654.55" x2="658.89" y2="643.17" />
+                    <line class="scale_thin" x1="654.42" y1="671.63" x2="643.05" y2="658.99" />
+                    <line class="scale_thin" x1="635.64" y1="686.83" x2="625.65" y2="673.08" />
+                    <line class="scale_thin" x1="593.83" y1="710.95" x2="586.92" y2="695.42" />
+                    <line class="scale_thin" x1="571.27" y1="719.6" x2="566.01" y2="703.43" />
+                    <line class="scale_thin" x1="547.92" y1="725.85" x2="544.39" y2="709.22" />
+                    <line class="scale_thin" x1="524.05" y1="729.62" x2="522.27" y2="712.71" />
+                    <line class="scale_thin" x1="475.79" y1="729.6" x2="477.56" y2="712.69" />
+                    <line class="scale_thin" x1="451.92" y1="725.81" x2="455.45" y2="709.18" />
+                    <line class="scale_thin" x1="428.58" y1="719.55" x2="433.83" y2="703.38" />
+                    <line class="scale_thin" x1="406.02" y1="710.88" x2="412.93" y2="695.35" />
+                    <line class="scale_thin" x1="364.23" y1="686.73" x2="374.22" y2="672.98" />
+                    <line class="scale_thin" x1="345.45" y1="671.52" x2="356.83" y2="658.89" />
+                    <line class="scale_thin" x1="328.37" y1="654.42" x2="341.01" y2="643.05" />
+                    <line class="scale_thin" x1="313.17" y1="635.64" x2="326.92" y2="625.65" />
+                    <line class="scale_thin" x1="289.05" y1="593.83" x2="304.58" y2="586.92" />
+                    <line class="scale_thin" x1="280.4" y1="571.27" x2="296.57" y2="566.01" />
+                    <line class="scale_thin" x1="274.15" y1="547.92" x2="290.78" y2="544.39" />
+                    <line class="scale_thin" x1="270.38" y1="524.05" x2="287.29" y2="522.27" />
+                    <line class="scale_thin" x1="270.4" y1="475.79" x2="287.31" y2="477.56" />
+                    <line class="scale_thin" x1="274.19" y1="451.92" x2="290.82" y2="455.45" />
+                    <line class="scale_thin" x1="280.45" y1="428.58" x2="296.62" y2="433.83" />
+                    <line class="scale_thin" x1="289.12" y1="406.02" x2="304.65" y2="412.93" />
+                    <line class="scale_thin" x1="313.27" y1="364.23" x2="327.02" y2="374.22" />
+                    <line class="scale_thin" x1="328.48" y1="345.45" x2="341.11" y2="356.83" />
+                    <line class="scale_thin" x1="345.58" y1="328.37" x2="356.95" y2="341.01" />
+                    <line class="scale_thin" x1="364.36" y1="313.17" x2="374.35" y2="326.92" />
+                    <line class="scale_thin" x1="406.17" y1="289.05" x2="413.08" y2="304.58" />
+                    <line class="scale_thin" x1="428.73" y1="280.4" x2="433.99" y2="296.57" />
+                    <line class="scale_thin" x1="452.08" y1="274.15" x2="455.61" y2="290.78" />
+                    <line class="scale_thin" x1="475.95" y1="270.38" x2="477.73" y2="287.29" />
+                    <text transform="matrix(1 0 0 1 620.9516 277.6338)" class="scale_num">55</text>
+                    <text transform="matrix(1 0 0 1 352.9516 279.6338)" class="scale_num">5</text>
+                    <text transform="matrix(1 0 0 1 717.9516 376.6338)" class="scale_num">50</text>
+                    <text transform="matrix(1 0 0 1 750.9516 510.6338)" class="scale_num">45</text>
+                    <text transform="matrix(1 0 0 1 229.9516 376.6338)" class="scale_num">10</text>
+                    <text transform="matrix(1 0 0 1 198.9516 510.6338)" class="scale_num">15</text>
+                    <text transform="matrix(1 0 0 1 711.9516 649.6338)" class="scale_num">40</text>
+                    <text transform="matrix(1 0 0 1 229.9516 649.6338)" class="scale_num">20</text>
+                    <text transform="matrix(1 0 0 1 608.9516 753.6338)" class="scale_num">35</text>
+                    <text transform="matrix(1 0 0 1 329.9516 753.6338)" class="scale_num">25</text>
+                    <text transform="matrix(1 0 0 1 473.9516 782.6338)" class="scale_num">30</text>
+                    <text transform="matrix(1 0 0 1 483.9516 256.6338)" class="scale_num">0</text>
+                </g>
+                <g class="clock_hand">
+                    <path id="red_panel" class="red" d="M500 275 A 225 225, 0, 1, 0, 500 725 L 500 500 Z" />
+                    <path id="long_hand" class="white" d="M500 500 H 725 V 494 A 6 6 0 0 0 719 488 H 500 Z" />
+                </g>
+                <g class="clock_hand">
+                    <path id="short_hand" class="white" d="M500 500 V 506 H 585 A 6 6 0 0 0 585 494 V 494 H 500 Z" />
+                    <circle class="white" cx="500" cy="500" r="45" />
+                </g>
+
+            </svg>
+
+            <div class="control_container">
+                <div class="inner">
+                    <input id="duration" type="range" min="0" max="60" value="30" step="1"
+                        onchange="moveHands(this.value);">
+                </div>
+                <div class="inner countdown" id="result"></div>
+                <div class="inner copyright" id="result_today"></div>
+                <div class="inner">
+                    <input id="start" type="button" value="시작" onclick="startTimer();" />
+                    <input id="stop" type="button" value="중지" onclick="stopTimer();" disabled />
+                </div>
+            </div>
+        </main>
+        <footer class="copyright">
+            <p>Original Design from MOD Timetimer(https://www.timetimer.com/) </p>
+        </footer>
+    </div>
+</body>
+
+
+</html>

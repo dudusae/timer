@@ -1,0 +1,109 @@
+svg {
+    margin-left:auto;
+    margin-right:auto;
+    display: block;
+    width: 80%;
+}
+path#frame_out {
+    fill: url(#frame_out_grd);
+}
+
+path#frame_inner {
+    fill: url(#frame_inner_grd);
+}
+
+path#clock_face {
+    fill: #EDF2F4;
+}
+
+path#clock_face_line {
+    filter:url(#inner_dropshadow);
+    fill: none;
+    stroke: #CED9DD;
+    stroke-miterlimit: 10;
+}
+
+.scale_bold {
+    fill: none;
+    stroke: #000000;
+    stroke-width: 5;
+    stroke-linecap: round;
+    stroke-miterlimit: 10;
+}
+
+.scale_thin {
+    fill: none;
+    stroke: #000000;
+    stroke-miterlimit: 10;
+}
+
+.scale_num {
+    font-family: 'Roboto-Bold';
+    font-size: 45px;
+}
+
+.clock_hand {
+    filter:url(#dropshadow);
+}
+
+#long_hand {
+    filter:url(#inner_dropshadow);
+    filter:url(#hand_dropshadow);
+}
+
+.red {
+    fill: #FF1027;
+}
+
+.white {
+    fill: #FFFFFF;
+}
+.control_container {
+    width:100%;
+    text-align:center;
+
+}
+.control_container input[type="button"] {
+    width:80px;
+    height:20px;
+    font-size: 20px;
+}
+
+.control_container input[type="range"] {
+    width:100%;
+    max-width: 400px;
+    height:35px;
+}
+
+.inner {
+    display: inline-block;
+    width:60%;
+}
+.countdown {
+    font-family: roboto;
+    font-size: 45px;
+    color: #ccc;
+}
+
+div#container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+svg {
+    max-height: 480px;
+    enable-background:new 0 0 1000 1000;
+}
+footer {
+    padding: 15px 0;
+    margin-top: auto;
+}
+.copyright {
+    font-size: 8px;
+    color: #ccc;
+    text-align: center;
+}
+
+:fullscreen {
+    background-color: white;
+}
