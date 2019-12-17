@@ -49,7 +49,7 @@ function enabled(id) {
     }
 }
 
-var result_today = 0;
+var resultToday = 0;
 
 function startTimer() {
     var start = Date.now(),
@@ -64,11 +64,15 @@ function startTimer() {
             remainMin = remain / 60,
             remainMinInt = parseInt(remainMin),
             remainSecInt = Math.round(remain % 60);
+
+        resultToday = resultToday + 1;
+        var resultTodayHour = parseInt(resultToday / 3600),
+            resultTodayMin = parseInt(resultToday / 60) - resultTodayHour * 60;
         // duration.setAttribute("value", remainMin);
         duration.value = remainMin;
         moveHands(remainMin);
         document.getElementById("result").innerHTML = remainMinInt + ":" + remainSecInt;
-        document.getElementById("result_today").innerHTML = "오늘누적 : " + Math.round((Date.now() - start) / 1000);
+        document.getElementById("result_today").innerHTML = "오늘누적 : " + resultTodayHour + "시간" + resultTodayMin + "분";
         
         if (remain == 0) {
             stopTimer();
@@ -82,10 +86,26 @@ function startTimer() {
 
 }
 
+var vid = document.getElementById("myVideo"); 
+
+function playVid() { 
+  vid.play(); 
+} 
+
+function pauseVid() { 
+  vid.pause(); 
+} 
+
+console.log('하잉4');
+
+
+
 function stopTimer() {
     clearInterval(timerId);
     disabled("stop");
     enabled("duration", "start");
+    console.log('하잉4');
+    playVid();
 }
 
 function moveHands(time) {
